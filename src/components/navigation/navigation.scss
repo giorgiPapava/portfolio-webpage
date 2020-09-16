@@ -1,0 +1,97 @@
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: auto;
+
+  width: 260px;
+  background-color: #111418;
+
+  .profile-wrapper {
+    margin-top: 30px;
+
+    .profile-picture {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 1rem solid #343a40;
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+
+  ul {
+    flex: 1;
+    max-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    li {
+      padding: 10px 50px;
+      font-size: 1.6rem;
+      transition: all 0.4s ease-out;
+
+      &.active {
+        color: #20c997;
+        font-weight: 700;
+      }
+
+      &:hover {
+        cursor: pointer;
+        box-shadow: inset 190px 0 0 0 #20c997;
+        color: white;
+      }
+      svg {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .social-links {
+    margin-bottom: 20px;
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+
+    a {
+      transition: all 0.4s ease-out;
+
+      &:hover {
+        transform: scale(1.5);
+      }
+
+      svg {
+        font-size: 1.4rem;
+        color: #aab1b8;
+        transition: all 0.4s ease-out;
+      }
+    }
+
+    .fa-facebook-f:hover {
+      color: #3b5998;
+    }
+    .fa-linkedin-in:hover {
+      color: #0077b5;
+    }
+
+    .fa-github:hover {
+      color: #333333;
+    }
+
+    .fa-twitter:hover {
+      color: #00acee;
+    }
+  }
+}
