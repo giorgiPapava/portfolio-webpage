@@ -1,0 +1,10 @@
+.resume-section {
+    background-color: blue;
+    color: white;
+    height: 100vh;
+    clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 100%);
+    margin-top: -30vh;
+    padding: 20rem 0;
+    position: relative;
+    z-index: 3;
+}

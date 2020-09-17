@@ -1,0 +1,13 @@
+.about-section {
+    background-color: yellow;
+    height: 100vh;
+    clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 100%);
+    margin-top: -20vh;
+    padding: 13rem 0;
+    position: relative;
+    z-index: 4;
+
+    h2 {
+        color: red;
+    }
+}
