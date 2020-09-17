@@ -16,6 +16,8 @@ import {
   faProjectDiagram,
 } from '@fortawesome/free-solid-svg-icons';
 
+import { Link } from 'react-scroll';
+
 function Navigation() {
   return (
     <div className="navbar-wrapper">
@@ -31,25 +33,71 @@ function Navigation() {
         </div>
 
         <ul>
-          <li className="active">
-            <FontAwesomeIcon icon={faHouseUser} />
-            Home
+          <li>
+            <Link
+              activeClass="active"
+              to="home-section"
+              spy={true}
+              smooth={true}
+              duration={1000}
+            >
+              <FontAwesomeIcon icon={faHouseUser} />
+              Home
+            </Link>
           </li>
           <li>
-            <FontAwesomeIcon icon={faFileContract} />
-            About Me
+            <Link
+              activeClass="active"
+              to="about-section"
+              spy={true}
+              offset={131}
+              smooth={true}
+              duration={1000}
+            >
+              <FontAwesomeIcon icon={faFileContract} />
+              About Me
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              activeClass="active"
+              to="resume-section"
+              spy={true}
+              smooth={true}
+              offset={200}
+              duration={1000}
+            >
+              <FontAwesomeIcon icon={faFilePdf} />
+              Resume
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              activeClass="active"
+              to="projects-section"
+              spy={true}
+              offset={230}
+              smooth={true}
+              duration={1000}
+            >
+              <FontAwesomeIcon icon={faProjectDiagram} />
+              Projects
+            </Link>
           </li>
           <li>
-            <FontAwesomeIcon icon={faFilePdf} />
-            Resume
-          </li>
-          <li>
-            <FontAwesomeIcon icon={faProjectDiagram} />
-            Projects
-          </li>
-          <li>
-            <FontAwesomeIcon icon={faAddressBook} />
-            Contact
+            <Link
+              activeClass="active"
+              to="contact-section"
+              spy={true}
+              offset={220}
+              smooth={true}
+              duration={1000}
+            >
+              <FontAwesomeIcon icon={faAddressBook} />
+              Contact
+            </Link>
           </li>
         </ul>
 
