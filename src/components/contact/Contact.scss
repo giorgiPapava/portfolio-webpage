@@ -1,9 +1,15 @@
 .contact-section {
     background-color: aqua;
     height: 100vh;
-    margin-top: -34vh;
+    margin-top: -35vh;
     padding-top: 23rem;
     position: relative;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../images/contact.jpg);
 
     h2 {
         color: black;

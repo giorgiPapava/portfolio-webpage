@@ -10,10 +10,10 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import {
   faAddressBook,
-  faFileContract,
-  faFilePdf,
+  faCode,
   faHouseUser,
   faProjectDiagram,
+  faUser,
 } from '@fortawesome/free-solid-svg-icons';
 
 import { Link } from 'react-scroll';
@@ -54,7 +54,7 @@ function Navigation() {
               smooth={true}
               duration={1000}
             >
-              <FontAwesomeIcon icon={faFileContract} />
+              <FontAwesomeIcon icon={faUser} />
               About Me
             </Link>
           </li>
@@ -62,14 +62,14 @@ function Navigation() {
           <li>
             <Link
               activeClass="active"
-              to="resume-section"
+              to="skills-section"
               spy={true}
               smooth={true}
               offset={200}
               duration={1000}
             >
-              <FontAwesomeIcon icon={faFilePdf} />
-              Resume
+              <FontAwesomeIcon icon={faCode} />
+              Skills
             </Link>
           </li>
 

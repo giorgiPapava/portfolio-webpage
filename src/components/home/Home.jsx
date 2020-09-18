@@ -14,7 +14,7 @@ function Home() {
             </Typing>
             <Typing startDelay={3000} speed={20}>
               <p>
-                Computer science student from Tbilisi, inspired individual who
+                Computer science student from Georgia, inspired individual who
                 is not afraid of challenges, doing exciting projects and
                 learning new things on daily basis.
               </p>

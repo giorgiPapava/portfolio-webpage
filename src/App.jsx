@@ -1,8 +1,8 @@
 import About from 'components/about/About';
-import Projects from 'components/about/Projects/Projects';
+import Projects from 'components/projects/Projects';
 import Contact from 'components/contact/Contact';
 import Home from 'components/home/Home';
-import Resume from 'components/resume/Resume';
+import Skills from 'components/skills/Skills';
 import React from 'react';
 import './App.scss';
 import Navigation from './components/navigation/navigation';
@@ -14,7 +14,7 @@ function App() {
       <main>
         <Home />
         <About />
-        <Resume />
+        <Skills />
         <Projects />
         <Contact />
       </main>
