@@ -1,69 +1,162 @@
 .projects-section {
-    background-color: white;
-    height: 100vh;
-    clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 100%);
-    margin-top: -34vh;
-    padding: 23rem 0;
-    position: relative;
-    z-index: 2;
+  background-color: #433a41;
+  height: 100vh;
+  clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 100%);
+  margin-top: -34vh;
+  padding: 23rem 0;
+  position: relative;
+  z-index: 2;
 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(../../images/projects.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../images/projects.jpg);
 
-    h2 {
-        font-weight: 500;
-        font-size: 5rem;
-        letter-spacing: 10px;
-        margin-top: 20px;
-        text-align: center;
-        background: -webkit-linear-gradient(white, #38495a);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+  h2 {
+    font-weight: 500;
+    font-size: 5rem;
+    letter-spacing: 10px;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+    background: -webkit-linear-gradient(white, #38495a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
-    .projects-wrapper {
-        margin: 30px auto 0 auto;
-        width: 70%;
+  .projects-wrapper {
+    margin: 30px auto 0 auto;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .project {
+      max-width: 280px;
+      max-height: 180px;
+      margin-right: 50px;
+      margin-bottom: 50px;
+      position: relative;
+      cursor: pointer;
+
+      &.avicii:after {
+        content: 'Avicii Tribute Page';
+      }
+
+      &.todo:after {
+        content: 'Todo App';
+      }
+
+      &::after {
+        content: '';
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transition: all 0.3s ease-in-out;
+
         display: flex;
-        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
 
-        .project {
-            max-width: 300px;
-            margin-right: 50px;
-            margin-bottom: 50px;
+        color: white;
+        font-size: 2rem;
+        font-weight: 400;
+      }
 
-            img {
-                width: 100%;
-            }
+      &:hover::after {
+        background: rgba(0, 0, 0, 0.7);
+        opacity: 1;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        &:hover {
+          -webkit-filter: blur(5px);
+          /* Safari 6.0 - 9.0 */
+          filter: blur(5px);
         }
+      }
     }
+  }
 
-    h3 {
-        font-weight: 500;
-        font-size: 3rem;
-        letter-spacing: 5px;
-        color: #7B8282;
-        text-align: center;
-    }
+  h3 {
+    font-weight: 500;
+    font-size: 3rem;
+    letter-spacing: 5px;
+    color: #7b8282;
+    text-align: center;
+  }
 
-    .mini-projects-wrapper {
-        margin: 30px auto;
-        width: 95%;
+  .mini-projects-wrapper {
+    margin: 30px auto;
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .project {
+      max-width: 200px;
+      margin-right: 50px;
+      margin-bottom: 50px;
+      position: relative;
+      cursor: pointer;
+
+      &.netflix::after {
+        content: 'Netflix Clone';
+      }
+
+      &.amazon::after {
+        content: 'Amazon Clone';
+      }
+
+      &.twitter::after {
+        content: 'Twitter Clone';
+      }
+
+      &.covid::after {
+        content: 'Covid-19 Tracker';
+      }
+
+      &::after {
+        content: '';
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 0.3s ease-in-out;
+
         display: flex;
-        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
 
-        .project {
-            max-width: 200px;
-            margin-right: 50px;
-            margin-bottom: 50px;
+        color: white;
+        font-size: 2rem;
+        font-weight: 400;
+      }
 
+      &:hover::after {
+        background: rgba(0, 0, 0, 0.7);
+        opacity: 1;
+      }
 
-            img {
-                width: 100%;
-            }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        &:hover {
+          -webkit-filter: blur(5px);
+          /* Safari 6.0 - 9.0 */
+          filter: blur(5px);
         }
+      }
     }
+  }
 }

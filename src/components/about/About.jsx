@@ -5,7 +5,7 @@ import './Stars.scss';
 function About() {
   return (
     <div className="about-section">
-      <section class="wrapper">
+      <section className="wrapper">
         <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
@@ -20,7 +20,7 @@ function About() {
                 pixel perfect design. I also make website more & more
                 interactive with web animations.
               </p>
-              <p class="title-text">
+              <p className="title-text">
                 I help you build brand for your business at an affordable price.
                 Delivering work within time and budget which meets client’s
                 requirements is my moto.

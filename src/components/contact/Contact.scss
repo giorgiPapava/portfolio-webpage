@@ -1,5 +1,5 @@
 .contact-section {
-    background-color: aqua;
+    background-color: #F1B8CC;
     height: 100vh;
     margin-top: -35vh;
     padding-top: 23rem;
@@ -12,6 +12,97 @@
     background-image: url(../../images/contact.jpg);
 
     h2 {
-        color: black;
+        font-weight: 500;
+        font-size: 5rem;
+        letter-spacing: 5px;
+        margin-top: 20px;
+        margin-bottom: 70px;
+        text-align: center;
+        color: white;
+    }
+
+    .note {
+        text-transform: uppercase;
+        font-size: 2rem;
+        width: 80%;
+        margin: 0 auto;
+        font-weight: 700;
+    }
+
+    form {
+        width: 80%;
+        margin: 30px auto;
+
+        .input-wrapper {
+            display: flex;
+            width: 100%;
+        }
+
+        input {
+            background-color: #232A31;
+            color: white;
+            border-color: #232a31;
+            padding: 1.3rem 1.6rem;
+            width: 100%;
+            margin-right: 50px;
+            font-family: 'Nunito',
+                sans-serif;
+            font-size: 1.6rem;
+
+
+            &::placeholder {
+                color: #777b7f;
+
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        textarea {
+            width: 100%;
+            margin-top: 20px;
+            background-color: #232a31;
+            border-color: #232a31;
+            padding: 1.3rem 1.6rem;
+            color: white;
+            font-size: 1.6rem;
+            font-weight: 500;
+            font-family: 'Nunito',
+                sans-serif;
+            resize: vertical;
+            overflow: auto;
+
+
+            &::placeholder {
+                color: #777b7f;
+            }
+        }
+
+        .button-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            button {
+                border-radius: 50rem;
+                border: 1px solid transparent;
+                font-weight: 600;
+                font-size: 1.3rem;
+                padding: 1.4rem 3.8rem;
+                background-color: #1baa80;
+                color: white;
+                cursor: pointer;
+                margin: 40px auto;
+
+                transition: all 0.4s ease;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
     }
 }
