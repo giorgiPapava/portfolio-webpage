@@ -38,101 +38,112 @@ function Projects() {
 
   return (
     <div className="projects-section">
-      <h2>Projects</h2>
-      <div className="projects-wrapper">
-        <div className="project avicii" onClick={(event) => toggleModal(event)}>
-          <img src={aviciiImage} alt="avicii project" />
-        </div>
-        <div className="project todo" onClick={(event) => toggleModal(event)}>
-          <img src={todoImage} alt="todo project"></img>
-        </div>
-      </div>
-
-      <div className="mini-projects-wrapper">
-        <div
-          className="project netflix"
-          onClick={(event) => toggleModal(event)}
-        >
-          <img src={netflixClone} alt="netflix clone project"></img>
-        </div>
-        <div className="project amazon" onClick={(event) => toggleModal(event)}>
-          <img src={amazonClone} alt="amazon clone project"></img>
-        </div>
-        <div className="project covid" onClick={(event) => toggleModal(event)}>
-          <img src={covidProject} alt="covid project"></img>
-        </div>
-        <div
-          className="project twitter"
-          onClick={(event) => toggleModal(event)}
-        >
-          <img src={twitterClone} alt="twitter clone project"></img>
-        </div>
-      </div>
-
-      <Modal
-        isOpen={isOpen}
-        onRequestClose={toggleModal}
-        contentLabel="Project"
-        className="mymodal"
-        overlayClassName="myoverlay"
-        closeTimeoutMS={500}
-      >
-        <h2>{currentProject.name}</h2>
-        <button onClick={() => setIsOpen(false)}>x</button>
-        <div className="row">
-          <div className="image-wrapper">
-            <img src={currentImg} alt="" />
+      <div className="wrapper">
+        <h2>Projects</h2>
+        <div className="projects-wrapper">
+          <div
+            className="project avicii"
+            onClick={(event) => toggleModal(event)}
+          >
+            <img src={aviciiImage} alt="avicii project" />
           </div>
-          <div className="info-wrapper">
-            <h4>Project Info:</h4>
-            <p>{currentProject.description}</p>
-            <h4>Project Details:</h4>
-            <ul>
-              <li>
-                <span>Client:</span>
-                {currentProject.client}
-              </li>
-              <li>
-                <span>Industry:</span>
-                {currentProject.industry}
-              </li>
-              <li>
-                <span>Technologies:</span>
-                {currentProject.technologies &&
-                  currentProject.technologies.map((technology, i, arr) => {
-                    if (arr.length - 1 === i) {
-                      return (
-                        <span className="technology" key={technology}>
-                          {technology}.
-                        </span>
-                      );
-                    } else {
-                      return (
-                        <span className="technology" key={technology}>
-                          {technology},
-                        </span>
-                      );
-                    }
-                  })}
-              </li>
-              <li>
-                <span>Date:</span>
-                {currentProject.date}
-              </li>
-              <li>
-                <span>URL:</span>
-                <a
-                  href={currentProject.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {currentProject.url}
-                </a>
-              </li>
-            </ul>
+          <div className="project todo" onClick={(event) => toggleModal(event)}>
+            <img src={todoImage} alt="todo project"></img>
           </div>
         </div>
-      </Modal>
+
+        <div className="mini-projects-wrapper">
+          <div
+            className="project netflix"
+            onClick={(event) => toggleModal(event)}
+          >
+            <img src={netflixClone} alt="netflix clone project"></img>
+          </div>
+          <div
+            className="project amazon"
+            onClick={(event) => toggleModal(event)}
+          >
+            <img src={amazonClone} alt="amazon clone project"></img>
+          </div>
+          <div
+            className="project covid"
+            onClick={(event) => toggleModal(event)}
+          >
+            <img src={covidProject} alt="covid project"></img>
+          </div>
+          <div
+            className="project twitter"
+            onClick={(event) => toggleModal(event)}
+          >
+            <img src={twitterClone} alt="twitter clone project"></img>
+          </div>
+        </div>
+
+        <Modal
+          isOpen={isOpen}
+          onRequestClose={toggleModal}
+          contentLabel="Project"
+          className="mymodal"
+          overlayClassName="myoverlay"
+          closeTimeoutMS={500}
+        >
+          <h2>{currentProject.name}</h2>
+          <button onClick={() => setIsOpen(false)}>x</button>
+          <div className="row">
+            <div className="image-wrapper">
+              <img src={currentImg} alt="" />
+            </div>
+            <div className="info-wrapper">
+              <h4>Project Info:</h4>
+              <p>{currentProject.description}</p>
+              <h4>Project Details:</h4>
+              <ul>
+                <li>
+                  <span>Client:</span>
+                  {currentProject.client}
+                </li>
+                <li>
+                  <span>Industry:</span>
+                  {currentProject.industry}
+                </li>
+                <li>
+                  <span>Technologies:</span>
+                  {currentProject.technologies &&
+                    currentProject.technologies.map((technology, i, arr) => {
+                      if (arr.length - 1 === i) {
+                        return (
+                          <span className="technology" key={technology}>
+                            {technology}.
+                          </span>
+                        );
+                      } else {
+                        return (
+                          <span className="technology" key={technology}>
+                            {technology},
+                          </span>
+                        );
+                      }
+                    })}
+                </li>
+                <li>
+                  <span>Date:</span>
+                  {currentProject.date}
+                </li>
+                <li>
+                  <span>URL:</span>
+                  <a
+                    href={currentProject.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {currentProject.url}
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </Modal>
+      </div>
     </div>
   );
 }

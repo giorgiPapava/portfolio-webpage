@@ -1,6 +1,6 @@
 .contact-section {
     background-color: #F1B8CC;
-    height: 100vh;
+    min-height: 120vh;
     margin-top: -35vh;
     padding-top: 23rem;
     position: relative;
@@ -11,11 +11,17 @@
     background-size: cover;
     background-image: url(../../images/contact.jpg);
 
+    .wrapper {
+        top: 20%;
+        position: absolute;
+        width: 100%;
+    }
+
     h2 {
+        margin-top: 100px;
         font-weight: 500;
         font-size: 5rem;
         letter-spacing: 5px;
-        margin-top: 20px;
         margin-bottom: 70px;
         text-align: center;
         color: white;
@@ -35,16 +41,19 @@
 
         .input-wrapper {
             display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
             width: 100%;
         }
 
         input {
+            max-width: 300px;
             background-color: #232A31;
             color: white;
             border-color: #232a31;
             padding: 1.3rem 1.6rem;
             width: 100%;
-            margin-right: 50px;
             font-family: 'Nunito',
                 sans-serif;
             font-size: 1.6rem;

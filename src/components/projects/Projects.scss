@@ -1,6 +1,6 @@
 .projects-section {
   background-color: #433a41;
-  height: 100vh;
+  min-height: 100vh;
   clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 100%);
   margin-top: -34vh;
   padding: 23rem 0;
@@ -13,11 +13,16 @@
   background-size: cover;
   background-image: url(../../images/projects.jpg);
 
+  .wrapper {
+    position: absolute;
+    width: 100%;
+    top: 20%;
+  }
+
   h2 {
     font-weight: 500;
     font-size: 5rem;
     letter-spacing: 10px;
-    margin-top: 30px;
     padding-bottom: 20px;
     text-align: center;
     background: -webkit-linear-gradient(white, #38495a);
@@ -29,13 +34,14 @@
     margin: 30px auto 0 auto;
     width: 70%;
     display: flex;
+    gap: 50px;
+    justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 100px;
 
     .project {
       max-width: 280px;
       max-height: 180px;
-      margin-right: 50px;
-      margin-bottom: 50px;
       position: relative;
       cursor: pointer;
 
@@ -96,13 +102,13 @@
   .mini-projects-wrapper {
     margin: 30px auto;
     width: 95%;
+    gap: 20px;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 
     .project {
       max-width: 200px;
-      margin-right: 50px;
-      margin-bottom: 50px;
       position: relative;
       cursor: pointer;
 
@@ -158,5 +164,20 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .projects-section {
+    min-height: 160vh;
+  }
+
+  .projects-wrapper {
+    gap: 20px !important;
+  }
+
+  .project {
+    max-height: 100px;
+    overflow: auto;
   }
 }

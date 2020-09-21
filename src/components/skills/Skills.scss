@@ -1,7 +1,7 @@
 .skills-section {
     background: #534133;
     color: white;
-    height: 100vh;
+    min-height: 100vh;
     clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 100%);
     margin-top: -30vh;
     padding: 20rem 0;
@@ -18,11 +18,16 @@
     flex-direction: column;
     align-items: center;
 
+    .wrapper {
+        position: absolute;
+        top: 25%;
+    }
+
     h2 {
         font-weight: 500;
         font-size: 5rem;
         letter-spacing: 10px;
-        margin-top: 50px;
+        text-align: center;
 
         background: -webkit-linear-gradient(white, #38495a);
         -webkit-background-clip: text;
@@ -30,7 +35,11 @@
     }
 
     .skills-wrapper {
+        margin-left: auto;
+        margin-right: auto;
         display: flex;
+        gap: 60px;
+        justify-content: center;
         flex-wrap: wrap;
         width: 90%;
         height: 50%;
@@ -39,14 +48,13 @@
 
         .skill {
             min-width: 100px;
+            max-width: 180px;
             flex: 1;
             box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.3);
             padding: 2rem;
             text-align: center;
             background-color: white;
             color: black;
-            margin-right: 60px;
-            margin-bottom: 60px;
             transition: all .4s ease;
 
             &:hover {
@@ -96,5 +104,20 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .skills-section {
+        min-height: 140vh;
+    }
+
+    .skills-wrapper {
+        gap: 20px !important;
+    }
+
+    .skill {
+        max-height: 250px;
+        overflow: auto;
     }
 }
