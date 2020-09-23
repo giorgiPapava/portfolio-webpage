@@ -1,11 +1,8 @@
 .skills-section {
+    margin-top: -50vh;
+    padding: 60rem 0;
     background: #534133;
     color: white;
-    min-height: 100vh;
-    clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 100%);
-    margin-top: -30vh;
-    padding: 20rem 0;
-    position: relative;
     z-index: 3;
 
     background-attachment: fixed;
@@ -14,42 +11,40 @@
     background-size: cover;
     background-image: url(../../images/skills.jpg);
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
     .wrapper {
-        position: absolute;
-        top: 25%;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%);
+        width: 100%;
     }
+
 
     h2 {
         font-weight: 500;
         font-size: 5rem;
         letter-spacing: 10px;
         text-align: center;
+        margin-bottom: 40px;
 
         background: -webkit-linear-gradient(white, #38495a);
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
     .skills-wrapper {
-        margin-left: auto;
-        margin-right: auto;
         display: flex;
-        gap: 60px;
         justify-content: center;
         flex-wrap: wrap;
-        width: 90%;
-        height: 50%;
-        margin-top: 100px;
         opacity: 0.8;
 
         .skill {
+            display: inline-block;
+            overflow: hidden;
+            margin: 20px;
             min-width: 100px;
             max-width: 180px;
-            flex: 1;
             box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.3);
             padding: 2rem;
             text-align: center;
@@ -60,11 +55,6 @@
             &:hover {
                 transform: translateY(-1rem);
                 box-shadow: 0px 0.3rem 2.2rem rgba(0, 0, 0, 0.5);
-            }
-
-
-            &:last-child {
-                margin-right: 0;
             }
 
             h3 {
@@ -107,17 +97,36 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 750px) {
     .skills-section {
-        min-height: 140vh;
-    }
+        h2 {
+            font-size: 4.5rem !important;
 
-    .skills-wrapper {
-        gap: 20px !important;
-    }
+        }
 
-    .skill {
-        max-height: 250px;
-        overflow: auto;
+        h3 {
+            font-size: 2.5rem !important;
+        }
+
+        p {
+            font-size: 1.8rem !important;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .skills-section {
+        h2 {
+            font-size: 3.5rem !important;
+
+        }
+
+        h3 {
+            font-size: 2rem !important;
+        }
+
+        p {
+            font-size: 1.5rem !important;
+        }
     }
 }

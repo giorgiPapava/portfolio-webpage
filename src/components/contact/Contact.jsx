@@ -6,7 +6,6 @@ function Contact() {
     <div className="contact-section">
       <div className="wrapper">
         <h2>Get in Touch</h2>
-        <p className="note">Send me a note</p>
         <form>
           <div className="input-wrapper">
             <input type="text" required placeholder="Name" />

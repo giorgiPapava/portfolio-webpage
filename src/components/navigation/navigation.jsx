@@ -3,14 +3,14 @@ import './navigation.scss';
 import profile from 'images/profile.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faFacebookF,
   faGithub,
   faLinkedinIn,
-  faTwitter,
+  faStackOverflow,
 } from '@fortawesome/free-brands-svg-icons';
 import {
   faAddressBook,
   faCode,
+  faEnvelope,
   faHouseUser,
   faProjectDiagram,
   faUser,
@@ -77,7 +77,7 @@ function Navigation() {
                 to="skills-section"
                 spy={true}
                 smooth={true}
-                offset={200}
+                offset={450}
                 duration={1000}
                 onClick={() => setShowNavigation(false)}
               >
@@ -92,7 +92,7 @@ function Navigation() {
                 activeClass="active"
                 to="projects-section"
                 spy={true}
-                offset={230}
+                offset={270}
                 smooth={true}
                 duration={1000}
               >
@@ -106,7 +106,7 @@ function Navigation() {
                 activeClass="active"
                 to="contact-section"
                 spy={true}
-                offset={220}
+                offset={400}
                 smooth={true}
                 duration={1000}
               >
@@ -133,18 +133,18 @@ function Navigation() {
             </a>
 
             <a
-              href="https://www.facebook.com/UvuvwevwevweOnyeteewveUgwemubwemOssas/"
+              href="https://stackoverflow.com/users/11614810/giorgi-papava/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon icon={faFacebookF} />
+              <FontAwesomeIcon icon={faStackOverflow} />
             </a>
             <a
-              href="https://twitter.com/NastyBlackLeg/"
+              href="mailto:giorgi.papava.00@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon icon={faTwitter} />
+              <FontAwesomeIcon icon={faEnvelope} />
             </a>
           </div>
         </nav>

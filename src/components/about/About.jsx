@@ -1,14 +1,10 @@
 import React from 'react';
 import './About.scss';
-import './Stars.scss';
 
 function About() {
   return (
     <div className="about-section">
       <section className="wrapper">
-        <div id="stars"></div>
-        <div id="stars2"></div>
-        <div id="stars3"></div>
         <div className="about-wrapper">
           <div id="title">
             <span>About Me</span>
@@ -21,9 +17,9 @@ function About() {
                 interactive with web animations.
               </p>
               <p className="title-text">
-                I help you build brand for your business at an affordable price.
-                Delivering work within time and budget which meets client’s
-                requirements is my moto.
+                I help you build website for your business at an affordable
+                price. Delivering work within time and budget which meets
+                client’s requirements is my moto.
               </p>
             </div>
 

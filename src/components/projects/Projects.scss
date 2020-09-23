@@ -1,12 +1,10 @@
 .projects-section {
   background-color: #433a41;
-  min-height: 100vh;
-  clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 100%);
-  margin-top: -34vh;
-  padding: 23rem 0;
-  position: relative;
-  z-index: 2;
-
+  clip-path: polygon(0 15%, 100% 0%, 100% 82%, 0 100%);
+  margin-top: -45rem;
+  padding: 30rem 0;
+  padding-bottom: 40rem;
+  z-index: 4;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -14,10 +12,13 @@
   background-image: url(../../images/projects.jpg);
 
   .wrapper {
-    position: absolute;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
     width: 100%;
-    top: 20%;
   }
+
 
   h2 {
     font-weight: 500;
@@ -27,6 +28,7 @@
     text-align: center;
     background: -webkit-linear-gradient(white, #38495a);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
@@ -34,13 +36,12 @@
     margin: 30px auto 0 auto;
     width: 70%;
     display: flex;
-    gap: 50px;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 100px;
 
     .project {
-      max-width: 280px;
+      margin: 10px;
+      max-width: 350px;
       max-height: 180px;
       position: relative;
       cursor: pointer;
@@ -102,15 +103,15 @@
   .mini-projects-wrapper {
     margin: 30px auto;
     width: 95%;
-    gap: 20px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 
     .project {
-      max-width: 200px;
+      max-width: 250px;
       position: relative;
       cursor: pointer;
+      margin: 20px;
 
       &.netflix::after {
         content: 'Netflix Clone';
@@ -167,17 +168,27 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 750px) {
   .projects-section {
-    min-height: 160vh;
-  }
+    h2 {
+      font-size: 4.5rem !important;
+    }
 
-  .projects-wrapper {
-    gap: 20px !important;
+    h3 {
+      font-size: 3rem !important;
+    }
   }
+}
 
-  .project {
-    max-height: 100px;
-    overflow: auto;
+
+@media screen and (max-width: 450px) {
+  .projects-section {
+    h2 {
+      font-size: 3.5rem !important;
+    }
+
+    h3 {
+      font-size: 2.5rem !important;
+    }
   }
 }

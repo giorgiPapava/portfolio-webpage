@@ -1,19 +1,17 @@
 .home-section {
+  position: relative;
+  height: 100vh;
   background-color: #0e1b2b;
-  min-height: 100vh;
   clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 100%);
   z-index: 5;
   position: relative;
 
   .home-content {
-    position: absolute;
-    top: 30%;
-    z-index: 10;
-
     h3 {
       font-weight: 700;
       font-size: 5rem;
       text-align: center;
+      padding: 0 20px;
     }
 
     p {
@@ -173,6 +171,32 @@
     .star:nth-child(5)::before,
     .star:nth-child(5)::after {
       animation-delay: 1.8s;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .home-section {
+    h3 {
+      font-size: 4.5rem !important;
+    }
+
+    p {
+      font-size: 2rem !important;
+    }
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  .home-section {
+    h3 {
+      width: 250px;
+      font-size: 3.5rem !important;
+    }
+
+    p {
+      font-size: 1.8rem !important;
     }
   }
 }
