@@ -1,5 +1,6 @@
 .about-section {
   position: relative;
+  max-width: 100vw;
   background-color: #121923;
   clip-path: polygon(0 0, 100% 0%, 100% 82%, 0 100%);
   padding: 30rem 0;
@@ -66,8 +67,7 @@
         p {
           font-size: 1.5rem;
           font-weight: 300;
-          width: 350px;
-          margin-left: 100px;
+          width: 250px;
           text-align: left;
           border-bottom: 1px solid rgba(250, 250, 250, 0.12);
           margin-bottom: 20px;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './navigation.scss';
 import profile from 'images/profile.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -20,6 +20,14 @@ import { Link } from 'react-scroll';
 
 function Navigation() {
   const [showNavigation, setShowNavigation] = useState(false);
+
+  useEffect(() => {
+    if (showNavigation) {
+      document.body.style.overflow = 'hidden';
+      return () => (document.body.style.overflow = 'unset');
+    }
+  }, [showNavigation]);
+
   return (
     <>
       <div
