@@ -1,9 +1,22 @@
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
+
+import ContactImage from '../../images/contact.jpg';
+
 import './Contact.scss';
 
 function Contact() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    rootMargin: '200px 0px',
+  });
+
   return (
-    <div className="contact-section">
+    <div
+      className="contact-section"
+      ref={ref}
+      style={inView ? { backgroundImage: `url(${ContactImage})` } : null}
+    >
       <div className="wrapper">
         <h2>Get in Touch</h2>
         <form>

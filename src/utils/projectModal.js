@@ -6,7 +6,7 @@ const projectModal = (projectName) => {
       project.description =
         'Project that I built to sharpen my React skills and to track my future projects. I used React JS as front-end and Firebase as back-end, Redux for state management and ReachRouter for routing. Project has user authentication using Firebase Authentication and usesFirestore for data management as well. Website is fully responsive.';
       project.client = 'Self Project';
-      project.industry = 'Front End';
+      project.industry = 'Fullstack';
       project.technologies = ['HTML5', 'CSS3', 'ReactJS', 'Redux', 'Firebase'];
       project.date = 'Aug 2020';
       project.url = 'https://todo-app-fa6eb.web.app/';

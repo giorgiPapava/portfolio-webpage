@@ -1,5 +1,6 @@
 import React from 'react';
-import './Skills.scss';
+import { useInView } from 'react-intersection-observer';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCss3Alt,
@@ -8,9 +9,21 @@ import {
   faReact,
 } from '@fortawesome/free-brands-svg-icons';
 
+import SkillsImage from '../../images/skills.jpg';
+
+import './Skills.scss';
+
 function Skills() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    rootMargin: '200px 0px',
+  });
   return (
-    <div className="skills-section">
+    <div
+      className="skills-section"
+      ref={ref}
+      style={inView ? { backgroundImage: `url(${SkillsImage})` } : null}
+    >
       <div className="wrapper">
         <h2>My Skills</h2>
         <div className="skills-wrapper">

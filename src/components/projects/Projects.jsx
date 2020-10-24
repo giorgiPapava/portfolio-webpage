@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { useInView } from 'react-intersection-observer';
+import Modal from 'react-modal';
+
 import projectModal from 'utils/projectModal';
-import './Projects.scss';
-import './Modal.scss';
+
+import ProjectsImage from '../../images/projects.jpg';
 import todoImage from 'images/todo.png';
 import aviciiImage from 'images/avicii.png';
 import netflixClone from 'images/netflix-clone.png';
@@ -9,7 +12,8 @@ import amazonClone from 'images/amazon-clone.png';
 import twitterClone from 'images/twitter-clone.png';
 import covidProject from 'images/covid.png';
 
-import Modal from 'react-modal';
+import './Projects.scss';
+import './Modal.scss';
 
 Modal.setAppElement('#root');
 
@@ -27,7 +31,10 @@ function Projects() {
   const [currentProject, setCurrentProject] = useState('');
   const [currentImg, setCurrentImg] = useState(null);
 
-  console.log(currentImg);
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    rootMargin: '200px 0px',
+  });
 
   function toggleModal(event) {
     const project = event.target.classList[1];
@@ -37,7 +44,11 @@ function Projects() {
   }
 
   return (
-    <div className="projects-section">
+    <div
+      className="projects-section"
+      ref={ref}
+      style={inView ? { backgroundImage: `url(${ProjectsImage})` } : null}
+    >
       <div className="wrapper">
         <h2>Projects</h2>
         <div className="projects-wrapper">
@@ -45,14 +56,14 @@ function Projects() {
             className="project avicii"
             onClick={(event) => toggleModal(event)}
           >
-            <img src={aviciiImage} alt="avicii project" />
+            {inView && <img src={aviciiImage} alt="avicii project" />}
           </div>
           <div className="project todo" onClick={(event) => toggleModal(event)}>
-            <img src={todoImage} alt="todo project"></img>
+            {inView && <img src={todoImage} alt="todo project"></img>}
           </div>
         </div>
 
-        <div className="mini-projects-wrapper">
+        {/* <div className="mini-projects-wrapper">
           <div
             className="project netflix"
             onClick={(event) => toggleModal(event)}
@@ -77,7 +88,7 @@ function Projects() {
           >
             <img src={twitterClone} alt="twitter clone project"></img>
           </div>
-        </div>
+        </div> */}
 
         <Modal
           isOpen={isOpen}
